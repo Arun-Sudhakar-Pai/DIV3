@@ -1,0 +1,26 @@
+<head>
+    <!-- Load plotly.js into the DOM -->
+    <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+</head>
+
+<body>
+    <div style="position: relative; flex: 1" id='myDiv'>
+        <!-- Plotly chart will be drawn inside this DIV -->
+
+    </div>
+    <script>
+        var data = [{
+            values: [82, 93, 29, 89, 101],
+            labels: ['SEA', 'APJ', 'China', 'Europe', 'USA'],
+            type: 'pie'
+        }];
+
+        var layout = {
+            title: 'Asian Diversity',
+            height: 400,
+            width: 500
+        };
+
+        Plotly.newPlot('myDiv', data, layout);
+    </script>
+</body>
